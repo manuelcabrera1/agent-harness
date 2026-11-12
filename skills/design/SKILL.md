@@ -13,8 +13,8 @@ Read whatever the prompt brings (a Slack thread, a doc, a ticket) and explore th
 
 ## 2. Method
 
-- **Default**: invoke `grill`.
-- **A question only running code can answer** (a state model, a UI to see): propose `prototype` for that question, then come back to `grill`.
+- **Default**: invoke `grilling` and `domain-modeling`, so terms and hard-to-reverse decisions land in the glossary and ADRs as the interview goes.
+- **A question only running code can answer** (a state model, a UI to see): propose `prototype` for that question, then come back to the interview.
 - **Reading legwork** (external docs, APIs): run `research` in the background and keep grilling the questions that do not depend on it.
 - **Too big for one session** (greenfield, the way there not yet visible): propose `wayfinder` and hand over to it; it ends at `spec` too.
 

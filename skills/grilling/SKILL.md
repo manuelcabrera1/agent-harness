@@ -1,11 +1,11 @@
 ---
-name: grill
-description: Interview the user to close a design, asking only the decisions that are really theirs, a few per round with options, assuming the rest out loud, and recording terms and decisions in the glossary and ADRs. Use when a plan, initiative or idea needs its decisions settled ("grill me", "ayúdame a cerrar el diseño", "vamos a darle una vuelta"), and as the interview inside /design.
+name: grilling
+description: Interview the user to close a design, asking only the decisions that are really theirs, a few per round with options, and assuming the rest out loud. Use when a plan, initiative or idea needs its decisions settled or stress-tested ("grill me", "ayúdame a cerrar el diseño", "vamos a darle una vuelta"), and as the interview inside /design, grill-with-docs, wayfinder and triage.
 ---
 
-# grill
+# grilling
 
-Read `~/.agents/skills/grill-with-docs/SKILL.md` and follow it, with the changes below. Where they disagree with it or with the skills it calls, these win.
+This skill takes the place of mattpocock's `grilling`: same name, so every skill that invokes `grilling` gets this version. Read the original at `~/.agents/skills/grilling/SKILL.md` (by path: invoking `grilling` would land here again) and follow it, with the changes below. Where they disagree, these win.
 
 ## Rounds
 
