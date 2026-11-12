@@ -23,7 +23,7 @@ flowchart TD
     R --> BD
 
     subgraph DS ["/design"]
-      G[grill] --> SZ{epic?}
+      G[grilling] --> SZ{epic?}
       SZ -- yes --> SP[spec → epic] --> TK[tickets → subtasks]
       SZ -- no --> CT1[create-ticket]
     end
@@ -65,7 +65,7 @@ flowchart TD
 | `dev` | own, user-invoked | router |
 | `design`, `build`, `explore` | own | flows |
 | `diagnose` | wraps `diagnosing-bugs` | stops at red and hands over |
-| `grill` | wraps `grill-with-docs` | assumed decisions in one block, at most three open questions per round |
+| `grilling` | takes the place of `grilling` | assumed decisions in one block, at most three open questions per round; every skill that invokes `grilling` (`grill-with-docs`, `wayfinder`, `triage`) gets this version |
 | `spec`, `tickets` | wrap `to-spec`, `to-tickets` | publish through the shared tracker config |
 | `create-ticket` | own | one ticket from a need, a thread or a closed design |
 | `commit-split` | own | uncommitted work → single-purpose commits |
@@ -87,7 +87,7 @@ flowchart TD
    ln -s "$PWD/agents/code-reviewer.md" ~/.claude/agents/
    ```
 
-3. Unlink from `~/.claude/skills/` the skills a wrapper replaces (`diagnosing-bugs`, `grill-with-docs`, `to-spec`, `to-tickets`) and the ones a flow replaces (`implement`, `code-review`, `ask-matt`), so they do not compete for the same prompts. They stay in `~/.agents/skills/` for the wrappers to read.
+3. Unlink from `~/.claude/skills/` the skills a wrapper replaces (`diagnosing-bugs`, `grilling`, `to-spec`, `to-tickets`; linking this repo's `grilling` takes its place) and the ones a flow replaces (`implement`, `code-review`, `ask-matt`), so they do not compete for the same prompts. They stay in `~/.agents/skills/` for the wrappers to read.
 
 ## Configure
 
