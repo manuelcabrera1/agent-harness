@@ -22,6 +22,7 @@ Show, in one message:
 
 - The acceptance criteria and the out of scope.
 - The tests, numbered. Each one: its `it('…')` description, one line of given / when / then, its seam, and the criterion it covers (`AC2`). Coming from /diagnose, test 1 is the reproducing test, already written and red.
+- The **decisions** already taken that the tests do not show: how a value object reaches a response, the shape of a contract field, how each test seeds its data. One line each, with the alternative discarded. They go in this list, where the user approves them with the tests, even when an insight block also mentions them.
 
 Ask the user to approve, remove (by number) or add. This is the moment the tests are judged before any implementation exists, so each one carries enough detail to be judged on its own. Without a ticket, this checkpoint also approves the ticket's content.
 
