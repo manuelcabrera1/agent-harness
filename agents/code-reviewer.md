@@ -57,8 +57,8 @@ A finding the `Context` already answers is not a finding. Treat `Context` as fac
 Pick the first one that applies:
 
 - **blocker**: an acceptance criterion is partial or missing; the normal path of the change, or of an existing caller, returns a wrong result or crashes; or a security finding is reachable from user input.
-- **should**: a real defect off the normal path (error paths, stale data, unbounded growth); scope; or an existing test changed so it no longer protects the behaviour it covered.
-- **nit**: everything else. That includes standards breaches with no runtime effect, style, small perf, and cases that need invalid stored data or a failing dependency to happen. Report these too: the caller offers them to the user.
+- **should**: a real defect off the normal path (error paths, stale data, unbounded growth); scope; an existing test changed so it no longer protects the behaviour it covered; or a standards breach where the code already holds the canonical alternative the rule names (a test builder's setter instead of a raw insert, a type's canonical accessor instead of another one).
+- **nit**: everything else. That includes the remaining standards breaches with no runtime effect, style, small perf, and cases that need invalid stored data or a failing dependency to happen. Report these too: the caller offers them to the user.
 
 One finding per root cause: a missing test, or a line that only matters once another finding is fixed, goes in that finding's `Fix`, not on its own line.
 

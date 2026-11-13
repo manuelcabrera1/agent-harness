@@ -44,7 +44,7 @@ Check each finding at its cited `file:line`. The check decides only whether the 
 | Finding | Outcome |
 |---|---|
 | Claim does not hold | `disagree`, with evidence (file:line, test, output) |
-| blocker or should, axis ac, bug, or security, and the fix keeps every exported name, signature, type, and the behaviour the intent describes, in at most ~10 changed lines besides its test | `fixed`: apply it |
+| blocker or should, axis ac, bug, security, or standards, and the fix keeps every exported name, signature, type, and the behaviour the intent describes, in at most ~10 changed lines besides its test | `fixed`: apply it |
 | blocker or should whose fix changes an export, a signature, a type, or intended behaviour, or needs more than ~10 lines | `decision` |
 | scope | `decision`, recommending removal |
 | nit, any axis | `optional` |
