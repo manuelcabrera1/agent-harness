@@ -42,6 +42,11 @@ Invoke `tdd` and follow its loop, with these changes:
 - The seams and tests approved at checkpoint 1 are the pre-agreed seams: no further confirmation.
 - One approved test per cycle, red then green.
 - **Leave everything uncommitted.** `commit-split` writes the history at the end.
+- **Convention over precedent.** Before writing a seed, a mapping or a projection, check the conventions for that area: the repo's `AGENTS.md` and docs, and the memory entries whose description matches it. When the code nearby does it another way, the convention wins: the precedent may belong to another layer. When a test helper drops data the test needs, extend the helper.
+
+  Example: an end-to-end test needs an order with a discount. The test builder has `withDiscount`, but the helper that saves orders for tests does not persist the discount.
+  - Wrong: drop `withDiscount` and write the discount straight into the database from the test, copying a repository test that seeds raw rows.
+  - Right: keep `anOrder().withDiscount(10).build()` in the Arrange and make the saving helper persist the discount, so every test seeds through the builder.
 
 Run typecheck and the single test file as you go. A test that proves unnecessary, or a missing one, changes the list: note it for the final report rather than asking.
 
