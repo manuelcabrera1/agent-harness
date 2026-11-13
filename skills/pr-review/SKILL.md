@@ -71,10 +71,10 @@ The general comment is only the disclaimer, as a GitHub alert in `language`:
 
 ```
 > [!NOTE]
-> Revisado por <model> en nombre de <on_behalf_of>.
+> <model> respondiendo en nombre de <on_behalf_of>.
 ```
 
-`Aprobado` on `APPROVE`, `Revisado` on `COMMENT` (in English, *Approved/Reviewed by … on behalf of …*). `<model>` is the name of the model running this review, such as `Claude Opus 5.5`, taken from your own identity. No summary of the PR, which the description already explains, and no recap of the inline comments. The one exception is the approach objection from step 5, as one line above the alert. With no `on_behalf_of`, ask the user for the name. `signature`, when set, goes after the alert.
+The same text on `APPROVE` and `COMMENT` (in English, *<model> replying on behalf of <on_behalf_of>.*). Never say the model reviewed or approved anything. `<model>` is the name of the model running this review, such as `Claude Opus 5.5`, taken from your own identity. No summary of the PR, which the description already explains, and no recap of the inline comments. The one exception is the approach objection from step 5, as one line above the alert. With no `on_behalf_of`, ask the user for the name. `signature`, when set, goes after the alert.
 
 ## 7. Approve and publish
 
