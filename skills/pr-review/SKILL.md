@@ -1,7 +1,6 @@
 ---
 name: pr-review
-description: Review a teammate's GitHub pull request with the code-reviewer agent and draft Conventional Comments in your voice, published only after your approval.
-disable-model-invocation: true
+description: Review a teammate's GitHub pull request with the code-reviewer agent and draft Conventional Comments in your voice, published only after your approval. Use when the user asks to review someone else's pull request ("review PR #45", "revisa la PR", "coméntame la PR 1234", "hazme una code review de esta PR", a GitHub PR URL to review), even if they don't mention Conventional Comments or tone.
 ---
 
 # pr-review
